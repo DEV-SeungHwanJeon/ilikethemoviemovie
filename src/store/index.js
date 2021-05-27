@@ -174,7 +174,7 @@ export default new Vuex.Store({
   },
   actions: {
     getMovies: function ({commit}, indicator) {
-      const URL = `http://127.0.0.1:8000/api/v1/movieapps/movies/${indicator}/`
+      const URL = `https://ilikethemoviemovie.herokuapp.com/api/v1/movieapps/movies/${indicator}/`
       // console.log(URL)
       axios({
         method: 'get',
@@ -194,7 +194,7 @@ export default new Vuex.Store({
     },
     searchQuery: function ({commit}, query) {
       if (query != '') {
-        const URL = `http://127.0.0.1:8000/api/v1/movieapps/search/${query}/`
+        const URL = `https://ilikethemoviemovie.herokuapp.com/api/v1/movieapps/search/${query}/`
         axios({
           method: 'get',
           url: URL,
@@ -212,11 +212,11 @@ export default new Vuex.Store({
       // console.log(info)
       let URL = ''
       if (info.recommendmethod === "today") {
-        URL = `http://127.0.0.1:8000/api/v1/movieapps/recommendation/${info.recommendmethod}/`
+        URL = `https://ilikethemoviemovie.herokuapp.com/api/v1/movieapps/recommendation/${info.recommendmethod}/`
       } else if (info.recommendmethod === "genre") {
-        URL = `http://127.0.0.1:8000/api/v1/movieapps/recommendation/${info.recommendmethod}/user/${info.user_id}/genre/${info.genre_id}/`
+        URL = `https://ilikethemoviemovie.herokuapp.com/api/v1/movieapps/recommendation/${info.recommendmethod}/user/${info.user_id}/genre/${info.genre_id}/`
       } else {
-        URL = `http://127.0.0.1:8000/api/v1/movieapps/recommendation/${info.recommendmethod}/object/${info.obj_id}/` // 
+        URL = `https://ilikethemoviemovie.herokuapp.com/api/v1/movieapps/recommendation/${info.recommendmethod}/object/${info.obj_id}/` // 
       }
       axios({
         method: 'get',
@@ -244,7 +244,7 @@ export default new Vuex.Store({
         })
     },
     getMovieDetail: function ({commit}, movie_id) {
-      const URL = `http://127.0.0.1:8000/api/v1/movieapps/movie/${movie_id}/`
+      const URL = `https://ilikethemoviemovie.herokuapp.com/api/v1/movieapps/movie/${movie_id}/`
       axios({
         method: 'get',
         url: URL,
@@ -259,7 +259,7 @@ export default new Vuex.Store({
         })
       },
     getArticles: function ({commit}, movie_id) {
-      const URL = `http://127.0.0.1:8000/api/v1/communities/movie/${movie_id}/articles/` // ${movie_id}
+      const URL = `https://ilikethemoviemovie.herokuapp.com/api/v1/communities/movie/${movie_id}/articles/` // ${movie_id}
       axios({
         method: 'get',
         url: URL,
@@ -280,7 +280,7 @@ export default new Vuex.Store({
     // getComments: function ({commit}, articles) {
     //   console.log(`articles ${articles}`)
     //   for (let index = 0; index < articles.length; index++) {
-    //     const URL = `http://127.0.0.1:8000/api/v1/communities/article/${articles[index].id}/comments/`
+    //     const URL = `https://ilikethemoviemovie.herokuapp.com/api/v1/communities/article/${articles[index].id}/comments/`
     //     console.log(URL)
     //     axios({
     //       method: 'get',
@@ -307,7 +307,7 @@ export default new Vuex.Store({
         formdata.append('content', info.content)
         formdata.append('user', info.user_id)
         formdata.append('movie', info.movie_id)
-        const URL = `http://127.0.0.1:8000/api/v1/communities/movie/${info.movie_id}/user/${info.user_id}/article/`
+        const URL = `https://ilikethemoviemovie.herokuapp.com/api/v1/communities/movie/${info.movie_id}/user/${info.user_id}/article/`
         axios({
           method: 'post',
           url: URL,
@@ -328,7 +328,7 @@ export default new Vuex.Store({
         formdata.append('content', info.content)
         formdata.append('user', info.user_id)
         formdata.append('movie', info.movie_id)
-        const URL = `http://127.0.0.1:8000/api/v1/communities/movie/${info.movie_id}/user/${info.user_id}/article/`
+        const URL = `https://ilikethemoviemovie.herokuapp.com/api/v1/communities/movie/${info.movie_id}/user/${info.user_id}/article/`
         axios({
           method: 'put',
           url: URL,
@@ -347,7 +347,7 @@ export default new Vuex.Store({
 
     },
     deleteArticle: function ({commit}, info) {
-      const URL = `http://127.0.0.1:8000/api/v1/communities/movie/${info.movie_id}/user/${info.user_id}/article/`
+      const URL = `https://ilikethemoviemovie.herokuapp.com/api/v1/communities/movie/${info.movie_id}/user/${info.user_id}/article/`
       const formdata = new FormData()
       formdata.append('id', info.id)
       axios({
@@ -366,7 +366,7 @@ export default new Vuex.Store({
         })
     },
     Signup : function ({commit}, userinfo) {
-      const URL = `http://127.0.0.1:8000/accounts/signup/`
+      const URL = `https://ilikethemoviemovie.herokuapp.com/accounts/signup/`
       const formdata = new FormData()
       formdata.append('username', userinfo.username)
       formdata.append('password', userinfo.password)
@@ -386,7 +386,7 @@ export default new Vuex.Store({
         })
     },
     Login : function ({commit}, userinfo) {
-      const URL = `http://127.0.0.1:8000/accounts/login/`
+      const URL = `https://ilikethemoviemovie.herokuapp.com/accounts/login/`
       const formdata = new FormData()
       formdata.append('username', userinfo.username)
       formdata.append('password', userinfo.password)
@@ -406,7 +406,7 @@ export default new Vuex.Store({
           console.log('유저네임', this.state.userName)
           axios({
             method: 'get',
-            url: `http://127.0.0.1:8000/accounts/getuserid/${this.state.userName}/`,
+            url: `https://ilikethemoviemovie.herokuapp.com/accounts/getuserid/${this.state.userName}/`,
             // headers: this.setToken(),
             })
               .then((res) => {
@@ -421,7 +421,7 @@ export default new Vuex.Store({
         })
     },
     ratingMovie : function ({commit},info) {
-      const URL = `http://127.0.0.1:8000/api/v1/movieapps/movie/${info.movie_id}/user/${info.user_id}/rating_movie/`
+      const URL = `https://ilikethemoviemovie.herokuapp.com/api/v1/movieapps/movie/${info.movie_id}/user/${info.user_id}/rating_movie/`
       const formdata = new FormData()
       formdata.append('movie', info.movie_id)
       formdata.append('user', info.user_id)
@@ -442,7 +442,7 @@ export default new Vuex.Store({
     },
     getRating: function ({commit}, info) {
       // console.log(`평점 가져올 영화 ID ${info.movie_id}`)
-      const URL = `http://127.0.0.1:8000/api/v1/movieapps/movie/${info.movie_id}/user/${info.user_id}/rating_movie/`
+      const URL = `https://ilikethemoviemovie.herokuapp.com/api/v1/movieapps/movie/${info.movie_id}/user/${info.user_id}/rating_movie/`
       
       return axios({
         method: 'get',
@@ -460,7 +460,7 @@ export default new Vuex.Store({
         })
     },
     getUserInfo : function ({commit}, user_id) {
-      const URL = `http://127.0.0.1:8000/accounts/profile/userinfo_change/${user_id}/`
+      const URL = `https://ilikethemoviemovie.herokuapp.com/accounts/profile/userinfo_change/${user_id}/`
       axios({
         method: 'get',
         url: URL,
@@ -475,7 +475,7 @@ export default new Vuex.Store({
         })
     },
     updateUserInfo : function ({commit}, userinfo) {
-      const URL = `http://127.0.0.1:8000/accounts/profile/userinfo_change/${userinfo.user_id}/`
+      const URL = `https://ilikethemoviemovie.herokuapp.com/accounts/profile/userinfo_change/${userinfo.user_id}/`
       const formdata = new FormData()
       
       formdata.append('user', userinfo.user_id)
@@ -503,7 +503,7 @@ export default new Vuex.Store({
         })
     },
     pjtInit : function ({commit}) {
-      const URL = `http://127.0.0.1:8000/api/v1/movieapps/pjtinit/`
+      const URL = `https://ilikethemoviemovie.herokuapp.com/api/v1/movieapps/pjtinit/`
       axios({
         method: 'get',
         url: URL,

@@ -72,7 +72,7 @@ export default {
       this.$store.state.userName = decoded.username
       axios({
         method: 'get',
-        url: `http://127.0.0.1:8000/accounts/getuserid/${this.$store.state.userName}/`,
+        url: `https://ilikethemoviemovie.herokuapp.com/accounts/getuserid/${this.$store.state.userName}/`,
         // headers: this.setToken(),
         })
           .then((res) => {
