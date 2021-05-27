@@ -14,13 +14,13 @@ export default {
     article: Object
   },
   created: function () {
-    console.log('ARticleitem의 this.article')
-    console.log(this.article)
+    // console.log('ARticleitem의 this.article')
+    // console.log(this.article)
   },
   methods : {
     getArticleDetail : function () {
-      console.log("getArticleDetail")
-      console.log(this.article)
+      // console.log("getArticleDetail")
+      // console.log(this.article)
       this.$store.state.detailarticle = this.article
     }
   }

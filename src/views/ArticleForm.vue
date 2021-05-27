@@ -34,13 +34,13 @@ export default {
     }
   },
   created: function () {
-    console.log("this.article에 들어있는 정보")
-    console.log(this.article)
+    // console.log("this.article에 들어있는 정보")
+    // console.log(this.article)
   },
   methods : {
     createArticle : function () {
-      console.log("this.article에 들어있는 정보")
-      console.log(this.article)
+      // console.log("this.article에 들어있는 정보")
+      // console.log(this.article)
       const info = {
         'title' : this.title,
         'content' : this.content,
@@ -53,8 +53,8 @@ export default {
       this.$store.dispatch('updateArticle', info)
     },
     updateArticle : function () {
-      console.log("this.article에 들어있는 정보")
-      console.log(this.article)
+      // console.log("this.article에 들어있는 정보")
+      // console.log(this.article)
       const info = {
         'id': this.article.id,
         'title' : this.title,

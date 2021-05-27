@@ -48,16 +48,16 @@ export default {
       return this.$store.state.indicator === indicator
     },
     getRecommendation: function (detailmovie) {
-      console.log("moviecard에서 getRecommendation")
-      console.log(detailmovie)
+      // console.log("moviecard에서 getRecommendation")
+      // console.log(detailmovie)
       const obj_id = detailmovie.id
       const info = {
         recommendmethod: 'item',
         obj_id: obj_id,
       }
       this.$store.state.detailmovie = [detailmovie]
-      console.log("moviecard에서 getRecommendation에 넘겨주는 info")
-      console.log(info)
+      // console.log("moviecard에서 getRecommendation에 넘겨주는 info")
+      // console.log(info)
       this.$store.dispatch('getRecommendation', info)
     }
   }

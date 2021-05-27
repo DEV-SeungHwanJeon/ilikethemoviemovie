@@ -47,7 +47,7 @@ export default {
       this.onGenreSelector = !this.onGenreSelector
     },
     getGenreMovieRecommend: function (genre_id, genre) {
-      console.log("GENRE 추천페이지에서 GetRecommendation 요청")
+      // console.log("GENRE 추천페이지에서 GetRecommendation 요청")
       this.selectedGenre = genre
       const info = {
         recommendmethod: 'genre',

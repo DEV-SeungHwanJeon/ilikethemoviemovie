@@ -40,8 +40,8 @@ export default {
     }
   },
   created: function () {
-    console.log('route params')
-    console.log(this.$route.params)
+    // console.log('route params')
+    // console.log(this.$route.params)
     this.getArticles()
   },
   updated: function () {

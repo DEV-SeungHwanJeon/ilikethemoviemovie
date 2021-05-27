@@ -32,7 +32,7 @@ export default {
     detailmovie : Object,
   },
   created: function () {
-    console.log(`이거 장르임 ${this.detailmovie.genre}`)
+    // console.log(`이거 장르임 ${this.detailmovie.genre}`)
   },
   methods: {
     onPicture: function () {
@@ -42,21 +42,21 @@ export default {
       this.isHovered = false
     },
     setMoviesId: function (movie_id) {
-      console.log(movie_id)
+      // console.log(movie_id)
       this.$store.dispatch('getMovieDetail', movie_id)
       
     },
     getRecommendation: function (detailmovie) {
-      console.log("moviecard에서 getRecommendation")
-      console.log(detailmovie)
+      // console.log("moviecard에서 getRecommendation")
+      // console.log(detailmovie)
       const obj_id = detailmovie.id
       const info = {
         recommendmethod: 'item',
         obj_id: obj_id,
       }
       this.$store.state.detailmovie = [detailmovie]
-      console.log("moviecard에서 getRecommendation에 넘겨주는 info")
-      console.log(info)
+      // console.log("moviecard에서 getRecommendation에 넘겨주는 info")
+      // console.log(info)
       this.$store.dispatch('getRecommendation', info)
       window.scrollTo(0,0);
       const userandmovieinfo = {

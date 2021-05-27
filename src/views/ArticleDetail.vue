@@ -26,14 +26,14 @@ export default {
     }
   },
   created: function () {
-    console.log('this.$route.params')
-    console.log(this.$route.params)
+    // console.log('this.$route.params')
+    // console.log(this.$route.params)
   },
   methods: {
     deleteArticle : function () {
-      console.log('deleteArticle시에 들어오는 $route param')
+      // console.log('deleteArticle시에 들어오는 $route param')
       const moviedata = this.$route.params
-      console.log(moviedata)
+      // console.log(moviedata)
       const info = {
         'id': this.article_id,
         'movie_id' : moviedata.id,

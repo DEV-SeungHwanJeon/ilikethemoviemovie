@@ -45,8 +45,8 @@ export default {
       this.$store.dispatch('clickImg', idx)
     },
     isClicked : function (idx) {
-      console.log('isClicked')
-      console.log(this.$store.state.clicked)
+      // console.log('isClicked')
+      // console.log(this.$store.state.clicked)
 
       return !this.$store.state.clicked[idx]
     }

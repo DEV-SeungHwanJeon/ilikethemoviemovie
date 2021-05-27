@@ -102,11 +102,11 @@ export default {
       this.$store.dispatch('getRecommendation', info)
     },
     getArticles: function () {
-      console.log(`${this.$store.state.detailmovie[0].id} 영화의 article 요청하는 것`)
+      // console.log(`${this.$store.state.detailmovie[0].id} 영화의 article 요청하는 것`)
       this.$store.dispatch('getArticles', this.$store.state.detailmovie[0].id)
     },
     ratingMovie: function (movie_id, score) {
-      console.log(movie_id, score)
+      // console.log(movie_id, score)
       // this.$store.state.ratingScore = score
       // this.ratingScore = score
       const info = {
