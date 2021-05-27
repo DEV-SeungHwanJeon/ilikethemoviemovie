@@ -319,7 +319,7 @@ export default new Vuex.Store({
             commit('CREATE_ARTICLE', res.data)
           })
           .catch((err) => {
-            console.log(commit)
+            // console.log(commit)
             console.error(err)
           })
       } else {
@@ -340,7 +340,7 @@ export default new Vuex.Store({
             commit('UPDATE_ARTICLE', res.data)
           })
           .catch((err) => {
-            console.log(commit)
+            // console.log(commit)
             console.error(err)
           })
       }
@@ -361,7 +361,7 @@ export default new Vuex.Store({
           commit('DELETE_ARTICLE', res.data)
         })
         .catch((err) => {
-          console.log(commit)
+          // console.log(commit)
           console.error(err)
         })
     },
@@ -416,7 +416,7 @@ export default new Vuex.Store({
               })
         })
         .catch((err) => {
-          console.log(commit)
+          // console.log(commit)
           console.error(err)
         })
     },
@@ -436,7 +436,7 @@ export default new Vuex.Store({
           commit('GET_RATING',res.data.score)
         })
         .catch((err) => {
-          console.log(commit)
+          // console.log(commit)
           console.error(err)
         })
     },
@@ -455,7 +455,7 @@ export default new Vuex.Store({
           
         })
         .catch((err) => {
-          console.error(err)
+          // console.error(err)
           commit("GET_RATING_FAILED", err)
         })
     },
